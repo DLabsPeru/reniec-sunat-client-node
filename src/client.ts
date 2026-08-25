@@ -47,7 +47,7 @@ export class ReniecSunatClient {
     if (!this.defaultHeaders.has("User-Agent")) {
       this.defaultHeaders.set(
         "User-Agent",
-        "@destiny-peru/reniec-sunat-client/0.1"
+        "@destiny-labs/reniec-sunat-client/0.1"
       );
     }
 

@@ -1,4 +1,4 @@
-# @destiny-peru/reniec-sunat-client
+# @destiny-labs/reniec-sunat-client
 
 Cliente TypeScript para consumir el microservicio `reniec-sunat` desde Node.js.
 Incluye tipos, validacion de DNI/RUC, timeout, cancelacion y errores de API
@@ -15,7 +15,7 @@ El paquete es publico y se distribuye mediante npmjs. No requiere token ni
 archivo `.npmrc`:
 
 ```bash
-npm install @destiny-peru/reniec-sunat-client
+npm install @destiny-labs/reniec-sunat-client
 ```
 
 ## Uso rapido
@@ -24,7 +24,7 @@ npm install @destiny-peru/reniec-sunat-client
 import {
   ReniecSunatApiError,
   createReniecSunatClient
-} from "@destiny-peru/reniec-sunat-client";
+} from "@destiny-labs/reniec-sunat-client";
 
 const client = createReniecSunatClient({
   timeoutMs: 15_000
@@ -140,15 +140,29 @@ versiones automaticamente:
 5. Al fusionar el PR, se crea el tag `vX.Y.Z` y el GitHub Release.
 6. El paquete de esa version se prueba, compila y publica publicamente en npmjs.
 
-La primera version publica sera `1.0.0`. El workflow de Release Please parte
-del manifest `0.0.0` para crear ese release inicial. Despues, el manifest,
-`package.json`, `package-lock.json` y `CHANGELOG.md` se actualizan mediante el
-PR de release.
+El historial de versiones se conserva desde `1.0.1`. La primera publicacion
+bajo el scope `@destiny-labs` se producira con el siguiente release generado por
+Release Please. El manifest, `package.json`, `package-lock.json` y
+`CHANGELOG.md` se actualizan mediante el PR de release.
 
 La publicacion utiliza npm Trusted Publishing mediante OIDC. El publicador
 confiable debe autorizar el repositorio
-`Destiny-Peru/reniec-sunat-client-node` y el workflow
+`DLabsPeru/reniec-sunat-client-node` y el workflow
 `release-please.yml`. Para la primera publicacion puede utilizarse
-temporalmente el secreto `NPM_TOKEN`; una vez habilitado Trusted Publishing,
-ese secreto puede eliminarse. Un registro npm no permite reemplazar una
-version que ya fue publicada.
+temporalmente el secreto `DESTINY_LABS_NPM_TOKEN`; una vez habilitado Trusted
+Publishing, ese secreto puede eliminarse. Un registro npm no permite
+reemplazar una version que ya fue publicada.
+
+## Migracion desde el scope anterior
+
+El paquete publicado como `@destiny-peru/reniec-sunat-client` no puede cambiar
+de scope en npm. Los consumidores deben reemplazarlo por el paquete nuevo:
+
+```bash
+npm uninstall @destiny-peru/reniec-sunat-client
+npm install @destiny-labs/reniec-sunat-client
+```
+
+Los imports deben usar `@destiny-labs/reniec-sunat-client`. Cuando la primera
+version del scope nuevo este publicada, el paquete anterior puede marcarse
+como obsoleto indicando esta ruta de migracion.
