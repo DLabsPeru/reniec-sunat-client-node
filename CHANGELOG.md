@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.3](https://github.com/DLabsPeru/reniec-sunat-client-node/compare/v1.0.2...v1.0.3) (2026-08-25)
+
+
+### Bug Fixes
+
+* publish npm releases exclusively through OIDC ([b66de26](https://github.com/DLabsPeru/reniec-sunat-client-node/commit/b66de264c2a3eb533e003d66a3df85d288d1a714))
+* publish npm releases exclusively through OIDC ([02e18d6](https://github.com/DLabsPeru/reniec-sunat-client-node/commit/02e18d679bb8960a9681397245cf3b303cf94cf1))
+
 ## [1.0.2](https://github.com/DLabsPeru/reniec-sunat-client-node/compare/v1.0.1...v1.0.2) (2026-08-25)
 
 
