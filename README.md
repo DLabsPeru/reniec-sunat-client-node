@@ -140,10 +140,10 @@ versiones automaticamente:
 5. Al fusionar el PR, se crea el tag `vX.Y.Z` y el GitHub Release.
 6. El paquete de esa version se prueba, compila y publica publicamente en npmjs.
 
-El historial de versiones se conserva desde `1.0.1`. La primera publicacion
-bajo el scope `@destiny-labs` se producira con el siguiente release generado por
-Release Please. El manifest, `package.json`, `package-lock.json` y
-`CHANGELOG.md` se actualizan mediante el PR de release.
+El historial de versiones se conserva desde `1.0.1`. El paquete se publica
+bajo el scope `@destiny-labs` desde la version `1.0.2`. El manifest,
+`package.json`, `package-lock.json` y `CHANGELOG.md` se actualizan mediante el
+PR de release.
 
 La publicacion utiliza npm Trusted Publishing mediante OIDC. El publicador
 confiable debe autorizar el repositorio
@@ -162,6 +162,5 @@ npm uninstall @destiny-peru/reniec-sunat-client
 npm install @destiny-labs/reniec-sunat-client
 ```
 
-Los imports deben usar `@destiny-labs/reniec-sunat-client`. Cuando la primera
-version del scope nuevo este publicada, el paquete anterior puede marcarse
-como obsoleto indicando esta ruta de migracion.
+Los imports deben usar `@destiny-labs/reniec-sunat-client`. El paquete anterior
+puede marcarse como obsoleto indicando esta ruta de migracion.
