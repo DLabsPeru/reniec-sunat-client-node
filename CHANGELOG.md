@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/DLabsPeru/reniec-sunat-client-node/compare/v1.0.1...v1.0.2) (2026-08-25)
+
+
+### Bug Fixes
+
+* update package scope from [@destiny-peru](https://github.com/destiny-peru) to [@destiny-labs](https://github.com/destiny-labs) in workflow, README, and package files ([a38230b](https://github.com/DLabsPeru/reniec-sunat-client-node/commit/a38230ba12fc252e0dd57938a76cb07f4138c19f))
+
 ## [1.0.1](https://github.com/Destiny-Peru/reniec-sunat-client-node/compare/v1.0.0...v1.0.1) (2026-07-28)
 
 
