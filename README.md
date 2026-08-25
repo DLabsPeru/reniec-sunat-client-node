@@ -128,6 +128,10 @@ Para verificar el contenido que se publicara:
 npm pack --dry-run
 ```
 
+Cada Pull Request hacia `main` ejecuta el workflow CI con Node.js 20 y 24 para
+validar tipos, pruebas, build, auditoria de dependencias y contenido del
+paquete antes de permitir el merge.
+
 ## Publicacion
 
 El proyecto usa Release Please y Conventional Commits para administrar las
