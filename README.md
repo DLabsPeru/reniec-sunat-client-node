@@ -148,10 +148,9 @@ Release Please. El manifest, `package.json`, `package-lock.json` y
 La publicacion utiliza npm Trusted Publishing mediante OIDC. El publicador
 confiable debe autorizar el repositorio
 `DLabsPeru/reniec-sunat-client-node` y el workflow
-`release-please.yml`. Para la primera publicacion puede utilizarse
-temporalmente el secreto `DESTINY_LABS_NPM_TOKEN`; una vez habilitado Trusted
-Publishing, ese secreto puede eliminarse. Un registro npm no permite
-reemplazar una version que ya fue publicada.
+`release-please.yml`. Las publicaciones automatizadas no utilizan tokens npm
+persistentes. Un registro npm no permite reemplazar una version que ya fue
+publicada.
 
 ## Migracion desde el scope anterior
 
