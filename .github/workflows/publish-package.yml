@@ -38,6 +38,3 @@ jobs:
 
       - name: Publish package
         run: npm publish --access public --ignore-scripts
-        env:
-          # Bootstrap token is optional after npm Trusted Publishing is enabled.
-          NODE_AUTH_TOKEN: ${{ secrets.DESTINY_LABS_NPM_TOKEN }}
